@@ -1,0 +1,10 @@
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+pZIx5cX00ohfUWQb
+
+echo "# argocd" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/modisecurtis/argocd.git
+git push -u origin main
